@@ -2,7 +2,7 @@ package services;
 
 import java.util.ArrayList;
 
-import model.Ciudad;
+import src.model.Ciudad;
 
 public class PaisesServices {
 	ArrayList <Ciudad> ciudades=new ArrayList<>();
