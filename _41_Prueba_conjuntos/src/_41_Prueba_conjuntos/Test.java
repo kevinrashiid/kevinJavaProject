@@ -12,7 +12,7 @@ public class Test {
 		datos.add("elemento 2");
 		datos.add("elemento 3");
 		datos.add("elemento 1");//sustituye a el primer "elemento 1"
-		System.out.println(datos.size());//para mostrar el cotenido de datos
+		System.out.println(datos.size());//para mostrar el tañano que tiene de datos
 		
 		//Para mostrar todo el contenido de datos
 		for(String s:datos) {
