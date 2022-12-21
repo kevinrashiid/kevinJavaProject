@@ -28,6 +28,4 @@ public class Ciudad {
 	public void setPais(String pais) {
 		this.pais=pais;
 	}
-
-
 }
