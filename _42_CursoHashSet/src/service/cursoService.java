@@ -26,8 +26,8 @@ public class cursoService {
 	public void guardarCurso(String curso, double dMediaCurso, int precio, String tematica) {
 		
 	}
-	public CursosModel buscarCurso(String curso, double dMediaCurso, int precio) { 
-		
+	public void buscarCurso(String curso, double dMediaCurso, int precio) { 
+		Cursos.add(new Pedidos(curso,dMediaCurso,precio));	
 	}
 	public double duracionMediaCursos(double dMediaCurso) {
 		
