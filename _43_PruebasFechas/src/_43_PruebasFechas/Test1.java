@@ -6,7 +6,7 @@ import java.util.Date;
 
 public class Test1 {
 
-	public static void main(String[] args) throws ParseException {
+	public static void main(String[] args) {
 		
 		Date d1=new Date();//creamos dos fechas 
 		Date d2=new Date(3322223495L);
@@ -26,13 +26,12 @@ public class Test1 {
 		//Parseado de fechas 
 		SimpleDateFormat formato2= new SimpleDateFormat("dd-MM-yyyy");//recibimos la fecha con este formato 
 		String f="11-08-2021"; //ejemplo para cuando nos metan datos por teclado Scanner
-		Date mifecha=formato2.parse(f);//transformamos lo que tenemos en f a formato date
-		System.out.println(format.format(mifecha));//lo imprimos con el format en la (linea 22)
-		
-		
-
-		
-		
-		
+		try {//blindamos con try catch
+			Date mifecha=formato2.parse(f);//transformamos lo que tenemos en f a formato date
+			System.out.println(format.format(mifecha));//lo imprimos con el format en la (linea 22)
+		}
+		catch(ParseException ex) {
+			System.out.println("El formato de fehca no es correcto");
+		}
 	}
 }
