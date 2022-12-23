@@ -2,6 +2,7 @@ package principal;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.InputMismatchException;
 import java.util.Scanner;
@@ -83,7 +84,7 @@ public class PedidosMain {
 		System.out.println("Total: "+pedidos.getTotal());
 	}
 	static void mostrarTodos() {////creamos todo lo que tiene que tener dentro el metodo mostrarTodo()
-		Pedidos[] todos=pedidosService.todos();
+		ArrayList<Pedidos>todos=pedidosService.todos();
 		
 		SimpleDateFormat format=new SimpleDateFormat("dd-MM-yyyy");
 		
