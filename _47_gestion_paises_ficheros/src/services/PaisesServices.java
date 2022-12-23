@@ -1,4 +1,13 @@
 package services;
+/*
+1.- Añadir ciudad
+2.- Ciudad más poblada
+3.- Ciudades por pais
+3.- Salir
+
+Cada ciudad contiene nombre, habitantes y pais
+La opción 3, te pide el nombre del pais y te muestra 
+los datos de todas la ciudades que pertenecen a ese pais*/
 
 import java.io.BufferedReader;
 import java.io.FileOutputStream;
