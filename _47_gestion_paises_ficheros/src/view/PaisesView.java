@@ -45,8 +45,6 @@ public class PaisesView {
 			opcion=0;
 		}
 	}while(opcion!=4);
-
-		
 		
 	}
 
