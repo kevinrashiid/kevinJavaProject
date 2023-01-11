@@ -1,5 +1,6 @@
 package _43_PruebasFechas;
 
+import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -22,6 +23,12 @@ public class Test1 {
 		SimpleDateFormat format= new SimpleDateFormat("dd/MM/yyyy");//creamos un objeto con el formato que queremos aplicara fechas 
 		System.out.println(format.format(d1));//te muestra la fecha d1 formateada 
 		System.out.println(format.format(d2));//te muestra la fecha d2 formateada
+		
+		//Formateado de fechas de una formar mas elegante de hacer
+		DateFormat df=DateFormat.getDateTimeInstance(DateFormat.SHORT, DateFormat.SHORT);
+		System.out.println("con DateFormat: "+df.format(d1));
+		System.out.println("con DateFormat: "+df.format(d2));
+		//System.out.println(df.getClass().getName());
 		
 		//Parseado de fechas 
 		SimpleDateFormat formato2= new SimpleDateFormat("dd-MM-yyyy");//recibimos la fecha con este formato 
