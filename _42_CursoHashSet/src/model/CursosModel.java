@@ -2,10 +2,10 @@ package model;
 
 public class CursosModel {
 	private String nombreCurso;
-	private int dMediaCurso;
+	private double dMediaCurso;
 	private int precio;
 	private String tematica;
-	public CursosModel(String nombreCurso, int dMediaCurso, int precio, String tematica) {
+	public CursosModel(String nombreCurso, double dMediaCurso, int precio, String tematica) {
 		
 		this.nombreCurso = nombreCurso;
 		this.dMediaCurso = dMediaCurso;
@@ -18,10 +18,10 @@ public class CursosModel {
 	public void setNombreCurso(String nombreCurso) {
 		this.nombreCurso = nombreCurso;
 	}
-	public int getdMediaCurso() {
+	public double getdMediaCurso() {
 		return dMediaCurso;
 	}
-	public void setdMediaCurso(int dMediaCurso) {
+	public void setdMediaCurso(double dMediaCurso) {
 		this.dMediaCurso = dMediaCurso;
 	}
 	public int getPrecio() {
