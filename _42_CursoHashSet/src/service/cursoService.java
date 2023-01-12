@@ -24,10 +24,11 @@ import model.CursosModel;
 public class cursoService {
 	HashSet<CursosModel> Cursos=new HashSet<>();
 	public void guardarCurso(String nombreCurso, double dMediaCurso, int precio, String tematica) {
-		if(!Cursos.contains(nombreCurso)) {
-			Cursos.add(new CursosModel(nombreCurso,dMediaCurso, precio, tematica));
+		for(CursosModel n:Cursos) {
+			if(!Cursos.contains(n)) {
+				Cursos.add(new CursosModel(nombreCurso,dMediaCurso, precio, tematica));
+			}
 		}
-		
 	}
 	public CursosModel buscarCurso(String nombreCurso, double dMediaCurso, int precio, String tematica) {
 		
