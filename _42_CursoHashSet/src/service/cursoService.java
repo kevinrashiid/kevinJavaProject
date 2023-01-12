@@ -25,8 +25,8 @@ public class cursoService {
 	HashSet<CursosModel> Cursos=new HashSet<>();
 	public void guardarCurso(String nombreCurso, double dMediaCurso, int precio, String tematica) {
 		for(CursosModel n:Cursos) {
-			if(!Cursos.contains(n)) {
-				Cursos.add(new CursosModel(nombreCurso,dMediaCurso, precio, tematica));
+			if(!Cursos.equals(nombreCurso)){//resolverlo
+				Cursos.add(n);
 			}
 		}
 	}
