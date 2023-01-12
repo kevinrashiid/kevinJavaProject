@@ -15,12 +15,14 @@ public class Pedidos {
 	private String producto;
 	private Date fecha;
 	private int total;
+	//constructor
 	public Pedidos(String producto, Date fecha, int total) {
 		super();
 		this.producto = producto;
 		this.fecha = fecha;
 		this.total = total;
 	}
+	//acceso a atributos
 	public String getProducto() {
 		return producto;
 	}

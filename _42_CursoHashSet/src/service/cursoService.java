@@ -23,15 +23,15 @@ import model.CursosModel;
 
 public class cursoService {
 	HashSet<CursosModel> Cursos=new HashSet<>();
-	public void guardarCurso(String curso, double dMediaCurso, int precio, String tematica) {
-		Cursos.add(new Pedidos(curso,dMediaCurso,precio));
+	public void guardarCurso(String nombreCurso, double dMediaCurso, int precio, String tematica) {
+		if(!Cursos.contains(nombreCurso)) {
+			Cursos.add(new CursosModel(nombreCurso,dMediaCurso, precio, tematica));
+		}
 		
 	}
-	public  buscarCurso(String curso, double dMediaCurso, int precio) { 
+	public CursosModel buscarCurso(String nombreCurso, double dMediaCurso, int precio, String tematica) {
 		
 		
-		
-
 	}
 	public double duracionMediaCursos(double dMediaCurso) {
 		
