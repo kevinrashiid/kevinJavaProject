@@ -49,12 +49,10 @@ public class cursoServiceFicheros {
 			try(FileOutputStream fos=new FileOutputStream(ruta,true);
 				PrintStream out=new PrintStream(fos);){
 				out.println(CursosModel.getNombreCurso()+"|"+CursosModel.getPrecio()+"|"+CursosModel.getdMediaCurso()+"|"+CursosModel.getTematica());
-				
 			}catch(IOException ex) {
 				ex.printStackTrace();
 			}
 			return true;
-			
 		}
 	public CursosModel buscarCurso(String nombreCurso) {//2.- Buscar curso //Metodo creado para buscar 
 	
@@ -66,7 +64,6 @@ public class cursoServiceFicheros {
 	
 	}
 	public void eliminarCurso(int precio){//5.- Eliminar cursos por precio
-
 
 	}
 }
