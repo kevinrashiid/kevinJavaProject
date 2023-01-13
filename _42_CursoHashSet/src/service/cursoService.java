@@ -17,28 +17,54 @@ Opción 5: Se pide un precio y se eliminarán todos los cursos cuyo precio sea i
 
 Utilizamos HashSet para guardar los cursos*/
 
+import java.util.ArrayList;
 import java.util.HashSet;
 
 import model.CursosModel;
 
 public class cursoService {
+	
 	HashSet<CursosModel> Cursos=new HashSet<>();
+	
 	public void guardarCurso(String nombreCurso, double dMediaCurso, int precio, String tematica) {
 		for(CursosModel n:Cursos) {
-			if(!Cursos.equals(nombreCurso)){//resolverlo
-				Cursos.add(n);
+			if(!Cursos.equals(n.getNombreCurso())){//no se si esta bien
+				Cursos.add(new Cs(nombreCurso,dMediaCurso,precio,tematica));
 			}
 		}
 	}
-	public CursosModel buscarCurso(String nombreCurso, double dMediaCurso, int precio, String tematica) {
-		
-		
+	public ArrayList<CursosModel> buscarCurso() {//2.- Buscar curso //Metodo creado para buscar 
+		ArrayList<CursosModel> c=new ArrayList<>();
+		for(CursosModel k:Cursos) {
+			c.add(k);
+		}
+		return c;
 	}
-	public double duracionMediaCursos(double dMediaCurso) {
-		
+	public double duracionMediaCursos() {//3.- Duración media de cursos// Metodo creado para mostrar la duracion media de todos los cursos registrados
+		double media=0;
+		for(CursosModel c: Cursos) {
+			media=media+c.getdMediaCurso();
+		}
+		return media;
 	}
-	public String tematicaCurso(String tematica) {
-		
+	public ArrayList<String> tematicaCurso(String tematica) {
+		ArrayList<String> res=new ArrayList<>();
+		for(CursosModel c:Cursos) {
+			if(c.getTematica().equalsIgnoreCase(tematica)) {
+				res.add(c.getNombreCurso());
+			}
+		}
+		return res;
 	}
-	public void eliminarCurso(String curso);
-}
+	public int eliminarCurso(int precio){
+	int cont=0;
+	for(CursosModel s:Cursos) {
+		if(s.getPrecio()>precio) {
+			Cursos.remove(s); 
+			cont++;
+			
+			}
+		}	
+	return cont;
+	}
+}	
