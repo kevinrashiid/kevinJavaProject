@@ -54,8 +54,8 @@ public class cursoServiceFicheros {
 			}
 			return true;
 		}
-	public CursosModel buscarCurso(String nombreCurso) {//2.- Buscar curso //Metodo creado para buscar 
-	
+	public CursosModel buscarCurso(String nombreCurso) {//2.- Buscar curso //Metodo creado para buscar
+		
 	}
 	public double duracionMediaCursos() {//3.- Duración media de cursos// Metodo creado para mostrar la duracion media de todos los cursos registrados
 		
