@@ -2,11 +2,12 @@ package view;
 
 import java.util.Scanner;
 
+import Service.AgendaContactosService;
 import model.Contacto;
 //Nueva versión de la agenda de contactos. Un contacto, además de nombre, se caracteriza por: telefono, email, edad
 
 public class ContactosMain {
-	static AgendaService agendaService=new AgendaService();
+	static AgendaContactosService agendaService=new AgendaContactosService();
 	public static void main(String[] args) {
 		Scanner sc=new Scanner(System.in);
 		int opcion;
@@ -63,8 +64,8 @@ public class ContactosMain {
 		Contacto contacto;
 		System.out.println("Introduce número de teléfono");
 		numero=sc.nextInt();
-		Contacto=agendaService.buscarContacto(numero);
-		System.out.println(Contacto.getNombre()+"-"+contacto.getEmail()+"-"+contacto.getEdad());
+		contacto=agendaService.buscarContacto(numero);
+		System.out.println(contacto.getNombre()+"-"+contacto.getEmail()+"-"+contacto.getEdad());
 	}
 	static void eliminarContacto() {
 		Scanner sc=new Scanner(System.in);

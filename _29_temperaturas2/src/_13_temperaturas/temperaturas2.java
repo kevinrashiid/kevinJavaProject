@@ -18,8 +18,6 @@ public class temperaturas2 {
 		
 		}
 		
-		
-		
 		//Cuantas ciudades tienen una temperatura superior a la media?
 		
 		//1.calcular la temperautura media

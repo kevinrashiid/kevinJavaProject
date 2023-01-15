@@ -5,7 +5,6 @@ import java.util.Arrays;
 public class LoteriaPrimitva {
 
 	public static void main(String[] args) {
-		
 		//Generar combinacion de loteria primitiva(6 numeros aletorios no repetidos entre, 1 y 49)
 		
 		int [] combinacion= new int[6];
@@ -21,7 +20,6 @@ public class LoteriaPrimitva {
 		}//al finalizar while, tenemos todos los numeros en el array 
 		ordenar(combinacion);
 		imprimir(combinacion);
-		
 	}
 	//numero=
 	static boolean repetido(int numero, int[] array, int cont) {

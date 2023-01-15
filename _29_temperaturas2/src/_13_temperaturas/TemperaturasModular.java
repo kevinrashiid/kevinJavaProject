@@ -11,15 +11,11 @@ String valores="23.7,11.3,18.4,30.1,28.5,16.2";//texto que contiene numeros
 		for(int i=0;i<datos.length;i++) {//RECOREMOS EL ARRAY
 			
 			 temps[i]=Double.parseDouble(datos[i]);//llevar los textos con formato numerico  aun array de numeros
-		
-		}
-		
+		}	
 		System.out.println("Temperaturas superiores a la media: "+calcularSuperiores(calcularMedia(temps),temps));
 		
 	}
-	
-	
-	double calcularMedia(double[] temperaturas ) {
+	static double calcularMedia(double[] temperaturas ) {
 		double media=0;
 		for(int i=0;i<temperaturas.length;i++) {
 			media=media+temperaturas[i];
@@ -27,7 +23,7 @@ String valores="23.7,11.3,18.4,30.1,28.5,16.2";//texto que contiene numeros
 		media=media/temperaturas.length;
 		return media;
 		}
-	int calcularSuperiores(double media, double[] temperaturas) {
+	static int calcularSuperiores(double media, double[] temperaturas) {
 		int contador=0;
 		for(int i=0;i<temperaturas.length;i++) {
 			if(temperaturas[i]>media) {

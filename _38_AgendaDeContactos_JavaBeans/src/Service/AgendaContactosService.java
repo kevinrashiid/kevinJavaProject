@@ -15,9 +15,7 @@ HashMap<Integer,Contacto> contactos=new HashMap<>();
 		if(!contactos.containsKey(numero)) {//esa pregunta equivale a:if(contactos.containsKey(numero)==false)
 			contactos.put(numero, new Contacto(nombre,numero,email,edad));
 		}
-		
 	}
-	
 	public Contacto buscarContacto(Integer numero) {
 		//devolvemos el objeto Contacto entero
 		return contactos.get(numero);
@@ -35,7 +33,6 @@ HashMap<Integer,Contacto> contactos=new HashMap<>();
 			i++;
 		}
 		return res; }
-
 }
 
 

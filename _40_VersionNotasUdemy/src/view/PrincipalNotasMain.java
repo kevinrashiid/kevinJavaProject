@@ -6,6 +6,8 @@ import service.GestionNotasService;
 
 public class PrincipalNotasMain {
 
+					//INCOMPLETO//	
+	
 	public static void main(String[] args) {
 		
 		//creamos un objeto de la clase que contiene las operaciones
@@ -19,5 +21,9 @@ public class PrincipalNotasMain {
 		    System.out.println("3.- Ver aprobados");
 		    System.out.println("4.- Salir");
 
-	}
-} 
+		}while();
+			
+		
+	} 
+}
+
