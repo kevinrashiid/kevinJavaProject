@@ -48,7 +48,7 @@ public class PedidosService {
 				//convierto line a array
 				String[] linea=fila.split("[|]");
 				//creo objeto pedido con datos de la línea
-				Pedidos p=new Pedido(linea[0],fm.parse(linea[1]),Double.parseDouble(linea[2]));
+				Pedidos p=new Pedidos(linea[0],fm.parse(linea[1]),Double.parseDouble(linea[2]));
 				//comprobamos si se trata de un pedido más reciente
 				if(p.getFecha().after(fechaReciente)) {
 					//si es así, actualizo variables
@@ -77,7 +77,7 @@ public class PedidosService {
 				//convierto line a array
 				String[] linea=fila.split("[|]");
 				//creo objeto pedido con datos de la línea
-				Pedidos p=new Pedido(linea[0],fm.parse(linea[1]),Double.parseDouble(linea[2]));
+				Pedidos p=new Pedidos(linea[0],fm.parse(linea[1]),Double.parseDouble(linea[2]));
 				//añadimos pedido a la lista de resultados
 				resultado.add(p);
 			}			

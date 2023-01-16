@@ -28,7 +28,7 @@ public class cursoService {
 	
 	HashSet<CursosModel> Cursos=new HashSet<>();
 	
-	public boolean guardarCurso(CursosModel cur) {
+	public boolean guardarCurso(CursosModel cur) {//se solicitan los datos del curso y se añade (opcional, no debería permitir cursos con el mismo nombre)
 		for(CursosModel n:Cursos) {
 			//si encontramos un curso con el mismo nombre salimos y devolvemos false
 			if(n.getNombreCurso().equalsIgnoreCase(n.getNombreCurso())){//no se si esta bien
@@ -61,7 +61,7 @@ public class cursoService {
 		}
 		return media/Cursos.size();
 	}
-	public List<String> tematicaCurso(String tematica) {
+	public List<String> tematicaCurso(String tematica) {//Se pìde una temática y se muestran  datos de todos los cursos que tengan esa temática
 		List<String> res=new ArrayList<>(); //creamos un ArrayList de tipo List // Arraylist es una sublista de List 
 		for(CursosModel c:Cursos) {
 			//si la tematica del curso que recorremos es igual a la temática recibida, lo añadimos a la lista auxiliar
@@ -71,7 +71,8 @@ public class cursoService {
 		}
 		return res; 
 	}
-	public void eliminarCurso(int precio){
+	public void eliminarCurso(int precio){//Se pide un precio y se eliminarán todos los cursos cuyo precio sea igual o superior a dicho valor
+
 	/*int cont=0;
 	for(CursosModel s:Cursos) {
 		if(s.getPrecio()>precio) {
@@ -81,4 +82,4 @@ public class cursoService {
 		}*/
 		Cursos.removeIf(t->t.getPrecio()>precio);
 	}
-}	
+}
