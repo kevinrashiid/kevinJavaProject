@@ -6,8 +6,6 @@ import java.util.Scanner;
 //Realizar un programa que solicite la introduccion de dos numeros
 //y muestre el resultado  de dividir uno entre otros
 public class Division {
-	
-	
 
 	public static void main(String[] args) {
 		Scanner sc= new Scanner(System.in);
