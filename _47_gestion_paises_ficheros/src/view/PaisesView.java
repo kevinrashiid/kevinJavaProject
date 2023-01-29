@@ -1,5 +1,5 @@
 package view;
-/*
+/*Enunciado Ejercicio
 1.- Añadir ciudad
 2.- Ciudad más poblada
 3.- Ciudades por pais
@@ -46,7 +46,26 @@ public class PaisesView {
 			}
 		}while(opcion!=4);
 	}
+
 	static void mostrarMenu() {
+		System.out.println("1.- Añadir ciudad");
+		System.out.println("2.- Ciudad más poblada");
+		System.out.println("3.- Ciudad por pais");
+		System.out.println("4.- Salir");
+	}
+	
+	static void meterCiudad() {
+		Scanner sc=new Scanner(System.in);
+		String ciudadNombre;
+		System.out.println("Introduce el nombre de la ciudad: \n");
+		ciudadNombre=sc.nextLine();
+	}
+	
+	static void ciudadMasPoblada() {
 		
+	}
+	
+	static void ciudadPorPais() {
+
 	}
 }
