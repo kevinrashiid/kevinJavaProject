@@ -14,9 +14,9 @@ import java.util.Date;
 public class Pedidos {
 	private String producto;
 	private Date fecha;
-	private int total;
+	private double total;
 	//constructor
-	public Pedidos(String producto, Date fecha, int total) {
+	public Pedidos(String producto, Date fecha, double total) {
 		super();
 		this.producto = producto;
 		this.fecha = fecha;
@@ -35,7 +35,7 @@ public class Pedidos {
 	public void setFecha(Date fecha) {
 		this.fecha = fecha;
 	}
-	public int getTotal() {
+	public double getTotal() {
 		return total;
 	}
 	public void setTotal(int total) {

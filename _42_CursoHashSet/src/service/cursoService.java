@@ -57,7 +57,7 @@ public class cursoService {
 	public double duracionMediaCursos() {//3.- Duración media de cursos// Metodo creado para mostrar la duracion media de todos los cursos registrados
 		double media=0;
 		for(CursosModel c: Cursos) {
-			media=media+c.getdMediaCurso();
+			media=media+c.getDMediaCurso();
 		}
 		return media/Cursos.size();
 	}

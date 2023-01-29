@@ -52,7 +52,7 @@ public class cursoServiceFicheros {
 				String s;
 				while((s=bf.readLine())!=null) {
 					//si encontramos curso con dicho nombre, salimos
-					if(s.split("[|]")[0].equals(CursosModel.getNombreCurso())) {
+					if(s.split("[|]")[0].equals(cur.getNombreCurso())) {
 						return false;
 					}
 				}
@@ -63,7 +63,7 @@ public class cursoServiceFicheros {
 			//que grabar en el fichero
 			try(FileOutputStream fos=new FileOutputStream(ruta,true);
 				PrintStream out=new PrintStream(fos);){
-				out.println(CursosModel.getNombreCurso()+"|"+CursosModel.getPrecio()+"|"+CursosModel.getdMediaCurso()+"|"+CursosModel.getTematica());
+				out.println(cur.getNombreCurso()+"|"+cur.getPrecio()+"|"+cur.getDMediaCurso()+"|"+cur.getTematica());
 			}catch(IOException ex) {
 				ex.printStackTrace();
 			}
@@ -106,7 +106,7 @@ public class cursoServiceFicheros {
 		}
 		return media/total;
 	}
-	public List<String> tematicaCurso(String tematica) {//Se pìde una temática y se muestran  datos de todos los cursos que tengan esa temática
+	public List<CursosModel> tematicaCurso(String tematica) {//Se pìde una temática y se muestran  datos de todos los cursos que tengan esa temática
 		List<CursosModel> aux=new ArrayList<>();
 		try(FileReader fr=new FileReader(ruta);
 				BufferedReader bf=new BufferedReader(fr);){
@@ -130,7 +130,7 @@ public class cursoServiceFicheros {
 		}
 		return aux;
 	}
-	public void eliminarCurso(int precio){//5.- Eliminar cursos por precio
+	public void eliminarCurso(double precio){//5.- Eliminar cursos por precio
 //Se pide un precio y se eliminarán todos los cursos cuyo precio sea igual o superior a dicho valor
 		List<CursosModel> auX= new ArrayList<>();
 		try(FileReader fr=new FileReader(ruta);
@@ -158,11 +158,10 @@ public class cursoServiceFicheros {
 		try(FileOutputStream fos=new FileOutputStream(ruta,true);
 				PrintStream out=new PrintStream(fos);){
 			for(CursosModel curso:auX) {
-			out.println(CursosModel.getNombreCurso()+"|"+CursosModel.getPrecio()+"|"+CursosModel.getdMediaCurso()+"|"+CursosModel.getTematica());
+			out.println(curso.getNombreCurso()+"|"+curso.getPrecio()+"|"+curso.getNombreCurso()+"|"+curso.getTematica());
 			}
 		}catch(IOException ex) {
 			ex.printStackTrace();
 		}
-
 	}
 }
