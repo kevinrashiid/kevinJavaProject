@@ -15,7 +15,7 @@ import java.util.Scanner;
 import services.PaisesServices;
 
 public class PaisesView {
-	
+
 	static PaisesServices paises=new PaisesServices();
 
 	public static void main(String[] args) {
@@ -25,27 +25,28 @@ public class PaisesView {
 		do {
 			mostrarMenu();
 			try {
-			opcion=Integer.parseInt(sc.nextLine());//conviertes lo que te meten por teclado(en este caso numeros) a nextLine
-			switch(opcion) { //evaluamos
-			case 1:
-				meterCiudad();//creamos menu para mostrar menu
-				break;
-			case 2:
-				ciudadMasPoblada();//metodo para buscar el mas reciente
-				break;
-			case 3:
-				ciudadPorPais();//metodo para mostrar todos los datos
-				break;
-			case 4:
-				System.out.println("---Adios---");
+				opcion=Integer.parseInt(sc.nextLine());//conviertes lo que te meten por teclado(en este caso numeros) a nextLine
+				switch(opcion) { //evaluamos
+				case 1:
+					meterCiudad();//creamos menu para mostrar menu
+					break;
+				case 2:
+					ciudadMasPoblada();//metodo para buscar el mas reciente
+					break;
+				case 3:
+					ciudadPorPais();//metodo para mostrar todos los datos 
+					break;
+				case 4:
+					System.out.println("---Adios---");
+				}
 			}
-		}
-		catch(InputMismatchException ex) {
-			System.out.println("Hey solo pon numeros");
-			opcion=0;
-		}
-	}while(opcion!=4);
+			catch(InputMismatchException ex) {
+				System.out.println("Hey solo pon numeros");
+				opcion=0;
+			}
+		}while(opcion!=4);
+	}
+	static void mostrarMenu() {
 		
 	}
-	
 }
